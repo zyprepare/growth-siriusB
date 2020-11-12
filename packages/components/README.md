@@ -1,6 +1,6 @@
 # @tarojs/components
 
-Taro 组件库。
+Sirius 小程序组件库，基于taro开发。
 
 在小程序端，React/Nerv 指向 `mini/index.js`，Vue 无需使用此包。
 

@@ -3,6 +3,7 @@
   "description": "基于taro框架的小程序组件",
   "private": true,
   "scripts": {
+    "c": "git-cz",
     "lint": "eslint packages/  --ext .js --ext .ts",
     "docs:rename-version": "cd website && docusaurus-rename-version",
     "clear-all": "rimraf package-lock.json packages/*/node_modules packages/*/package-lock.json packages/*/yarn.lock",
@@ -17,6 +18,11 @@
     "release:beta": "lerna publish --force-publish=* --exact --skip-temp-tag  --preid=beta --npm-tag=beta",
     "release": "npm-run-all build release:lerna && npm run changelog && node ./build/docs-version.js",
     "test": "lerna run --parallel --scope babel-preset-taro  --scope @tarojs/components --scope @tarojs/loader --scope @tarojs/react --scope @tarojs/webpack-runner --scope @tarojs/mini-runner test:ci"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
   },
   "workspaces": [
     "packages/*"
@@ -43,6 +49,12 @@
   ],
   "author": "stars-fe",
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.2",
+    "cz-lerna-changelog": "^2.0.3",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.1"
   }
 }

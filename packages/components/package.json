@@ -16,5 +16,6 @@
   "dependencies": {
     "@babel/cli": "^7.12.1",
     "typescript": "^4.0.5"
-  }
+  },
+  "gitHead": "80d58aefcdb5da132e400cb21c4f9bdbc16cf96b"
 }
